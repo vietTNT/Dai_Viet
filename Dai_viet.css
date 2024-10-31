@@ -31,7 +31,10 @@ video {
 /* background-attachment: fixed;
   background-size: cover; đặt ảnh thành hình nền bảo phủ toàn bộ */
 /* } */
-a:link,
+body {
+  overflow-y: hidden;
+}
+/* a:link,
 a:visited {
   color: white;
   padding: 15px 25px;
@@ -42,6 +45,16 @@ a:visited {
 a:hover,
 a:active {
   background-color: chartreuse;
+} */
+
+.em {
+  width: 19rem; /* Ảnh phủ kín chiều ngang khung */
+  height: 41rem; /* Ảnh phủ kín chiều cao khung */
+  object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+  position: absolute;
+  top: 20.5rem;
+  left: 20.5rem;
+  border-radius: 10px;
 }
 
 table,
@@ -67,11 +80,13 @@ img {
 table {
   width: 19rem;
   height: 41rem;
-  background-image: url(em.jpg);
-  background-repeat: repeat;
+  position: relative;
+  top: 20rem;
+  left: 20rem;
+  /* background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: -8rem -8rem;
+  background-position: center; */
 }
 /* .gio {
   text-align: center;
@@ -103,4 +118,10 @@ td {
 .giao_dien img {
   max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử */
   height: auto; /* Giữ tỷ lệ hình ảnh */
+}
+/* th:first-of-type:hover {
+  background-color: aqua;
+} */
+.camera {
+  width: 10pxs;
 }
